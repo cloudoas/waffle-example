@@ -1,4 +1,4 @@
-package io.github.daniezcoding.waffle.rest;
+package io.github.cloudoas.waffle.rest;
 
 import java.security.Principal;
 

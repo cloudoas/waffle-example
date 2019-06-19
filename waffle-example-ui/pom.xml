@@ -8,7 +8,7 @@
 	<name>waffle-example-ui</name>
 	<packaging>pom</packaging>
 	<parent>
-		<groupId>io.github.daniezcoding</groupId>
+		<groupId>io.github.cloudoas</groupId>
 		<artifactId>waffle-example</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>

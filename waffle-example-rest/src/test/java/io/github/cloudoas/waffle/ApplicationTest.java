@@ -1,4 +1,4 @@
-package io.github.daniezcoding.waffle;
+package io.github.cloudoas.waffle;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package io.github.daniezcoding.waffle;
+package io.github.cloudoas.waffle;
 
 import java.util.HashMap;
 import java.util.Map;
