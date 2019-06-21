@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 //const endpoint = 'http://localhost:8080/';
 
 // for same origin deployment
-const endpoint = '/';
+const endpoint = '/api/';
 
 @Injectable({
     providedIn: 'root'

@@ -21,6 +21,10 @@ export class AppComponent implements OnInit {
       this.env = 'Running in Development mode';
     }
 
+    this.loadData();
+  }
+
+  loadData(){
     this.rest.getMessage('hello').subscribe((data: any) => {
       this.message = data;
     });
@@ -28,6 +32,11 @@ export class AppComponent implements OnInit {
     this.rest.getMessage('userInfo').subscribe((data: any) => {
       this.userInfo = data;
     });
+  }
+  
+  handleClick(event: any){
+    this.loadData();
+	  alert('ok!');
   }
 
 }

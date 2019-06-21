@@ -21,8 +21,9 @@ public class WaffleConfig {
     	NegotiateSecurityFilter waffleNegotiateSecurityFilter = new NegotiateSecurityFilter();
     	registrationBean.setFilter(waffleNegotiateSecurityFilter);
     	registrationBean.setName("waffleFilter");
-    	registrationBean.addUrlPatterns("/*");
+    	registrationBean.addUrlPatterns("/api/*");
     	registrationBean.setInitParameters(initParams);
+    	registrationBean.setOrder(2);
     	return registrationBean;
     }
 }
