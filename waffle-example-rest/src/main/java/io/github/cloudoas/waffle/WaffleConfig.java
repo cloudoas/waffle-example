@@ -6,11 +6,14 @@ import java.util.Map;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import io.github.cloudoas.waffle.rest.AuthorizationInterceptor;
 import waffle.servlet.NegotiateSecurityFilter;
 
 @Configuration
-public class WaffleConfig {
+public class WaffleConfig implements WebMvcConfigurer{
 
     @Bean
     public FilterRegistrationBean<NegotiateSecurityFilter> waffleNegotiateSecurityFilterRegistration() {
@@ -25,5 +28,10 @@ public class WaffleConfig {
     	registrationBean.setInitParameters(initParams);
     	registrationBean.setOrder(2);
     	return registrationBean;
+    }
+    
+    @Override
+    public void addInterceptors (InterceptorRegistry registry) {
+        registry.addInterceptor(new AuthorizationInterceptor());
     }
 }
